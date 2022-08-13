@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  composer:
+    image: composer:latest
+    working_dir: /usr/src/app
+    volumes:
+      - ../laravel_main:/usr/src/app
+    command: "install --ignore-platform-reqs"
+
+  app:
+    build: './php_apache'
+    working_dir: /var/www
+    ports:
+      - 8081:80
+    environment:
+      APACHE_DOCUMENT_ROOT: '/var/www/public'
+    volumes:
+      - ../laravel_main:/var/www
