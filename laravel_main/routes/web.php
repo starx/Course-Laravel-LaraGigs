@@ -22,3 +22,9 @@ Route::get('/hello', function () {
         ->header('Content-Type', 'text/html')
         ->header('foo', 'bar');
 });
+
+Route::get('/hello-plain', function () {
+    return response('<h1>Hello world</h1>', 200)
+        ->header('Content-Type', 'text/plain')
+        ->header('foo', 'bar');
+});
