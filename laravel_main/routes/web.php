@@ -19,12 +19,15 @@ Route::get('/', function () {
 
 Route::get('/hello', function () {
     return response('<h1>Hello world</h1>', 200)
-        ->header('Content-Type', 'text/html')
-        ->header('foo', 'bar');
+        ->header('Content-Type', 'text/html');
 });
 
-Route::get('/hello-plain', function () {
+Route::get('/hello/plain', function () {
     return response('<h1>Hello world</h1>', 200)
-        ->header('Content-Type', 'text/plain')
+        ->header('Content-Type', 'text/plain');
+});
+
+Route::get('/hello/custom-header-value', function () {
+    return response('<h1>Hello world</h1>', 200)
         ->header('foo', 'bar');
 });
