@@ -1,0 +1,15 @@
+#!/bin/sh
+
+cd /var/dev/43.course_laravel_laragigs/dev/laravel_main/
+docker run \
+    --network=host \
+    --rm \
+    -e HOME="$HOME" \
+    -u $(id -u):$(id -g) \
+    -v "$HOME":"$HOME" \
+    -v "/var/dev/43.course_laravel_laragigs/dev":"/var/dev/43.course_laravel_laragigs/dev" \
+    -w "$PWD" \
+    php:8-alpine \
+    php "$@"
+
+exit $?

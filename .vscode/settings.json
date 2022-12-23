@@ -1,0 +1,6 @@
+{
+    "php.executablePath": "/var/dev/43.course_laravel_laragigs/dev/vscode/phpwrapper",
+    "php.validate.executablePath": "/var/dev/43.course_laravel_laragigs/dev/vscode/phpwrapper",
+    "php.debug.executablePath": "/var/dev/43.course_laravel_laragigs/dev/vscode/phpwrapper",
+    "php.suggest.basic": false
+}
